@@ -77,8 +77,36 @@ Added file to utilize GitHub Actions when files are commited
 Moved the project to edit, build and run on WLS (rather than on Windows)
 Note: I had a problem testing on Windows so I moved to WLS 2
 
-Comment: This chapter is chock full of information. It can be overwhemling but the chapter presents everything - step-by-step. The only place I had to 
+**Comments**: This chapter is chock full of information. It can be overwhemling but the chapter presents everything - step-by-step. The only place I had to 
 stop and google was how to [install grype](https://lindevs.com/install-grype-on-ubuntu) on Ubuntu 22.04. The instructions in the book did not work and the instructions on the grype web site did not work 
 (I kept getting permissions issues). The surprising thing is at the time the author ran grype for vulnerabilities it returned no issues. I unfortunately 
 saw many of the dependency libraries have Critical to High vulnerabilities today.  The good news is that the author anticipated this and does not have 
 the build fail. 
+
+Chapter 4
+---------
+This chapter covered the following topics:
+* The Spring **Environment** object
+* The need to NOT include configuration data in the application codebase
+* The need for the cloud native application to remain immutable across different environments
+* Using **Spring Cloud Config Server** and **Spring Cloud Config Client** 
+* The distinction between using property file packaged with the app vs. environment variables vs. configuration service
+* What are **properties** and **profiles**
+* Obtaining properties from command-line arguments vs. JVM system properties vs. OS environment variable vs. configuration data files 
+* Using the **@Value** annotation to inject properties
+* Using **@ConfigurationProperties** annotation
+* Defining and using custom properties 
+* Use profiles as **feature flags** 
+* How to intialize the book catalog when in "testdata" profile
+* Set up a new GitHub **config-repo** to hold our application configuration data
+* Create a new GitHub application **config-service** to use as our Spring Cloud Config Service
+* Setting up our own Spring Cloud Config Service (that taps/uses our config-repo)
+* Setting up our catalog-service application to use the Spring Cloud Config Client
+* How to make the configuration client - resilient!
+* How to refresh configuration at runtime - Learning to use the **Spring Boot Actuator**
+* How to use **Spring Retry**
+
+**Comments:** Another information packing chapter. I loved how the concepts were presented step-by-step. I was able to follow along and get everything up and running and tested.
+Needless to say, so much of the material was new to me and I really appreciated how it was presented by the author. 
+The book is worth it the price just for the first four chapters.
+
