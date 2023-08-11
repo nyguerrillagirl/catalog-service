@@ -78,7 +78,7 @@ Moved the project to edit, build and run on WLS (rather than on Windows)
 Note: I had a problem testing on Windows so I moved to WLS 2
 
 Comment: This chapter is chock full of information. It can be overwhemling but the chapter presents everything - step-by-step. The only place I had to 
-stop and google was how to install grype on Ubuntu 22.04. The instructions in the book did not work and the instructions on the grype web site did not work 
+stop and google was how to [install grype](https://lindevs.com/install-grype-on-ubuntu) on Ubuntu 22.04. The instructions in the book did not work and the instructions on the grype web site did not work 
 (I kept getting permissions issues). The surprising thing is at the time the author ran grype for vulnerabilities it returned no issues. I unfortunately 
 saw many of the dependency libraries have Critical to High vulnerabilities today.  The good news is that the author anticipated this and does not have 
 the build fail. 
