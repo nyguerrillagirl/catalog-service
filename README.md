@@ -110,3 +110,33 @@ This chapter covered the following topics:
 Needless to say, so much of the material was new to me and I really appreciated how it was presented by the author. 
 The book is worth it the price just for the first four chapters.
 
+Chapter 5
+---------
+This chapter covers 
+
+* how to use databases in a cloud native application
+* Implementing state via persistence
+* Using Spring Data JDBC
+* How to test data persistence with Spring Boot and Testcontainers
+* How to use Flyway to manage database change
+
+**Comments:** This was another easy to follow chapter. I did get stuck (i.e. things did not work) but I always traced it to some typo
+or mistake I made. I wish there were links to good tutorials on the many topics presented. This does remind me that many of these
+books make quite a number of assumptions on the skill set you bring to the table, the big one being quite familiar with advanced Java
+concepts - for me that would be functional style programming. The one area that I truly wish there was more time and attention
+was testing.  I find the use of all the annotations in the test classes: @DataJdbcTest, @Import, @AutoConfigurationTestDatabae, @ActiveProfiles,
+@ExtendWith, @Mock, @InjectMocks, @WebMvcTest, @MockBean, @JsonTest, @SpringBootTest a bit overwhelming! Code like this:
+		```
+		webTestClient
+				.post()
+				.uri("/books")
+				.bodyValue(expectedBook)
+				.exchange()
+				.expectStatus().isCreated()
+				.expectBody(Book.class).value(actualBook -> {
+					assertThat(actualBook).isNotNull();
+					assertThat(actualBook.isbn())
+							.isEqualTo(expectedBook.isbn());
+				});
+		```
+It would be nice to know where to look to know all the .<functionName> you can add. 
