@@ -12,11 +12,11 @@ I am making my way through the book in order to a) get to chapter 6 b) resume wo
 ** I HIGHLY RECOMMEND THE BOOK ** 
 
 Unlike the LiveProject this book provides step by step instructions and detailed explanations and of course links
-to obtain more information on the various (and many) tools is suggests.
+to obtain more information on the various (and many) tools and technologies the author suggests for further reading.
 
 I originally started using Windows/Java 17 and IntelliJ but decided to move the project into Ubuntu 22.04 using WSL 2.
-I still use IntelliJ but directly use my Ubuntu project...it has all been working fine (so far). I find this book a great read 
-and wish my LiveProject was more helpful.
+I still use IntelliJ on Windows but directly use my Ubuntu project...it has all been working fine (so far). 
+I find this book a great read and wish my LiveProject was more helpful.
 
 Chapter 1
 ---------
@@ -27,13 +27,13 @@ This chapter covers the following topics (from book Summary):
 * Cloud platforms deliver their services at different levels of abstraction: infrastructure (IaaS), container (CaaS), platform (PaaS), functions (FaaS), or software (SaaS)
 * Cloud native applications are horizontally scalable, loosely coupled, highly cohesive, resilient to faults, manageable, and observable
 * Cloud native development is supported by automation, continuous delivery, and DevOps
-* Contintuous delivery is a holistic engineering practice for delivering high-quaility software quickly, reliably, and safely
-* DevOps is a culture enabling colloboration among different roles to deliver business value together
+* Continuous  delivery is a holistic engineering practice for delivering high-quality software quickly, reliably, and safely
+* DevOps is a culture enabling collaboration among different roles to deliver business value together
 
 Comment: 
 This chapter has no coding. It was an introduction to the philosophy of cloud native application. There was A LOT of information in this chapter. 
 I found myself understanding that one should approach building an application on the cloud from a totally different perspective than I assumed. I always 
-went from the point of view - let me build it and worry about putting on the cloud later. No! This is not the right approach and know I can see why.
+went from the point of view - let me build it and worry about putting on the cloud later. No! This is not the right approach and now I can see why.
 
 Chapter 2
 ---------
@@ -50,6 +50,7 @@ This chapter covers the following topics:
 * Kubernetes Deployments
 * Kubernetes Services  
 
+* I installed Docker for Windows
 
 ** Added initial IntelliJ project for the Catalog Service
 
@@ -82,6 +83,10 @@ stop and google was how to [install grype](https://lindevs.com/install-grype-on-
 (I kept getting permissions issues). The surprising thing is at the time the author ran grype for vulnerabilities it returned no issues. I unfortunately 
 saw many of the dependency libraries have Critical to High vulnerabilities today.  The good news is that the author anticipated this and does not have 
 the build fail. 
+
+12/22/2023 - In reading my notes, I forgot to note the use of a Record (vs. a Class) to represent a domain entity.
+I am not familiar with using a Record vs. a Class. It feels more intuitive to me to use an @Entity domain class.
+I will try to comment on this after my review and I complete the book. 
 
 Chapter 4
 ---------
