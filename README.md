@@ -14,9 +14,9 @@ I am making my way through the book in order to a) get to chapter 6 b) resume wo
 Unlike the LiveProject this book provides step by step instructions and detailed explanations and of course links
 to obtain more information on the various (and many) tools and technologies the author suggests for further reading.
 
-I originally started using Windows/Java 17 and IntelliJ but decided to move the project into Ubuntu 22.04 using WSL 2.
+I originally started my development using Windows/Java 17 and IntelliJ but decided to move the project into Ubuntu 22.04 using WSL 2.
 I still use IntelliJ on Windows but directly use my Ubuntu project...it has all been working fine (so far). 
-I find this book a great read and wish my LiveProject was more helpful.
+I find this book a great read and wish my LiveProject was as helpful as this book.
 
 Chapter 1
 ---------
@@ -53,6 +53,57 @@ This chapter covers the following topics:
 * I installed Docker for Windows
 
 ** Added initial IntelliJ project for the Catalog Service
+** The key thing to learn in this Chapter is how to get your application to run as a docker container using minikube
+
+This chapter required I get my Docker and Kubernetes instructions down. Luckily there are many tutorials and good
+Manning books on the subject:
+* Docker In Action, 2nd Edition by Jeff Nickloff and Stephen Kuenzli
+* Kubernetes in Action, 2nd Edition by Marko Luksa (I actually read this book in a technical book club. This book is a great step-by-step guide.)
+
+There are many technologies, frameworks and products mentioned in this chapter. The books covers many of them in 
+the upcoming chapters. So there is quite a bit this book covers. The best news I can provide - it is detailed and
+covered step-by-step.
+
+If this book does not add a thick layer of knowledge into your toolbox then I don't know what will.
+
+1. Spring MVC
+2. Spring WebFlux
+3. Project Reactor
+4. Spring Cloud Stream
+5. Spring Cloud Function (Azure Functions, AWS Lambda, Knative)
+6. PostgreSQL
+7. Spring Data JDBC
+8. Spring Data R2DBC
+9. Flyway
+10. Redis
+11. Spring Session
+12. Spring Session Data Redis
+13. Spring Cloud Config
+14. ConfigMaps
+15. Secrets
+16. Spring Cloud Gateway
+17. Spring Boot Actuator
+18. Micrometer
+19. Prometheus
+20. Grafana, Grafana Tempo
+21. OpenTelemetry
+22. Fluent Bit
+23. Loki
+24. Spring Cloud Circuit Breaker
+25. Resilience4J
+26. OAuth 2.1, OpenID Connect
+27. Spring Security
+28. Keycloak
+29. JUnit5
+30. Testcontainers
+31. Cloud Native Buildpacks
+32. Docker and Kubernetes
+33. Spring Native
+34. GraalVM
+35. GitHub Actions (covered in the next chapter)
+36. GitOps
+37. Argo CD
+38. Angular
 
 Chapter 3
 ---------
@@ -73,13 +124,14 @@ Chapter 3
 * @JsonTest
 * Using GitHub Actions
 
-Added Repository, Service and Controller classes. Added Exception handler and test cases 
-Added file to utilize GitHub Actions when files are commited
-Moved the project to edit, build and run on WLS (rather than on Windows)
-Note: I had a problem testing on Windows so I moved to WLS 2
+** Added Repository, Service and Controller classes. Added Exception handler and test cases 
+** Added file to utilize GitHub Actions when files are commited
+** Moved the project to edit, build and run on WLS (rather than on Windows)
+** Note: I had a problem testing on Windows so I moved to WLS 2
 
 **Comments**: This chapter is chock full of information. It can be overwhemling but the chapter presents everything - step-by-step. The only place I had to 
-stop and google was how to [install grype](https://lindevs.com/install-grype-on-ubuntu) on Ubuntu 22.04. The instructions in the book did not work and the instructions on the grype web site did not work 
+stop and google was how to [install grype](https://lindevs.com/install-grype-on-ubuntu) on Ubuntu 22.04. 
+The instructions in the book did not work and the instructions on the grype web site did not work 
 (I kept getting permissions issues). The surprising thing is at the time the author ran grype for vulnerabilities it returned no issues. I unfortunately 
 saw many of the dependency libraries have Critical to High vulnerabilities today.  The good news is that the author anticipated this and does not have 
 the build fail. 
@@ -87,6 +139,8 @@ the build fail.
 12/22/2023 - In reading my notes, I forgot to note the use of a Record (vs. a Class) to represent a domain entity.
 I am not familiar with using a Record vs. a Class. It feels more intuitive to me to use an @Entity domain class.
 I will try to comment on this after my review and I complete the book. 
+
+**Note**: This project uses Spring Boot 2.7.14 which means that if you start a new project using Spring Boot 3+ you will find you will need different imports and dependencies.
 
 Chapter 4
 ---------
@@ -110,6 +164,10 @@ This chapter covered the following topics:
 * How to make the configuration client - resilient!
 * How to refresh configuration at runtime - Learning to use the **Spring Boot Actuator**
 * How to use **Spring Retry**
+
+Interesting Links for more information
+* [A Quick Guide to @TestPropertySource](https://www.baeldung.com/spring-test-property-source)
+* [Spring @PropertySource annotation tutorial](https://zetcode.com/spring/propertysource/)
 
 **Comments:** Another information packing chapter. I loved how the concepts were presented step-by-step. I was able to follow along and get everything up and running and tested.
 Needless to say, so much of the material was new to me and I really appreciated how it was presented by the author. 
