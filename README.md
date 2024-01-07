@@ -203,3 +203,23 @@ was testing.  I find the use of all the annotations in the test classes: @DataJd
 				});
 		```
 It would be nice to know where to look to know all the .<functionName> you can add. 
+
+Chapter 6
+---------
+This chapter covers 
+ * Creating containers (from images for PostgreSQL and our Spring Boot image) 
+ * Creating and running a Dockerfile
+ * Using Cloud Native Buildpacks
+ * Using Docker Compose to manage all our containers
+ * Using GitHub Actions - for deployment
+
+Comments: There was so much in this chapter. I found following the instructions step-by-step lead to a 
+successful outcome. My only problem is - as a developer I imagine most of the time I would like to stay
+in the IDE. I guess the goal is to use test cases to do the testing (with Testcontainers if it makes sense) and 
+deploy the application.
+
+Note: There was a time when I could not see the images and containers I was creating in Docker Desktop. You will need
+to make sure you are working in the correct docker context.
+
+To view context are available: docker context ls
+To change to the right context: docker context use desktop-linux 
